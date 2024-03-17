@@ -1,0 +1,20 @@
+---
+import Download from './Download.astro'
+import Discord from './Discord.astro'
+import GitHub from './GitHub.astro'
+import LinkedIn from './LinkedIn.astro'
+---
+
+<section id="top" class="flex flex-col scroll-mt-[108px] bg-dark text-white text-2xl font-code font-semibold py-24 justify-center">
+    <p class="py-4 px-56 bg-light text-4xl text-white-dark">1.  // Hello, world!</p>
+    <h1 class="py-4 px-56 text-4xl">2.  <span class="text-sky">Soy Katy</span> = &lt;<span class="text-yellow-light">Desarrolladora Web</span>&gt;;</h1>
+    <p class="py-4 px-56 bg-light text-4xl">3.  <span class="text-yellow-light">Enamorada</span> del código = <span class="text-primary">true</span>;</p>
+    <p class="py-4 px-56 text-4xl text-white-dark">4.  // Creando constantemente</p>
+    <ul class="flex gap-2 py-4 px-56 bg-light font-poppins font-medium text-base h-[72px] items-center">
+        <li class="flex items-center gap-2 rounded border-solid leading-none border-white text-white border-2 hover:text-dark hover:border-primary hover:bg-primary"><a href="../../data/hv-katy-barboza.pdf" class="flex gap-2 px-4 py-2" download>Hoja de vida<Download /></a></li>
+        <li class="rounded border-solid leading-none border-white text-white border-2 hover:text-primary hover:border-primary hover:bg-hover"><a href="#contact" class="flex px-4 py-2">Contacto</a></li>
+        <li class="rounded border-solid leading-none border-transparent text-white border-2 hover:border-hover hover:bg-hover"><a href="https://discord.com/users/katy_barboza" target="_blank" class="flex p-2"><Discord /></a></li>
+        <li class="rounded border-solid leading-none border-transparent text-white border-2 hover:border-hover hover:bg-hover"><a href="https://github.com/katy-paola" target="_blank" class="flex p-2"><GitHub /></a></li>
+        <li class="rounded border-solid leading-none border-transparent text-white border-2 hover:border-hover hover:bg-hover"><a href="https://www.linkedin.com/in/katy-barboza-baena" target="_blank" class="flex p-2"><LinkedIn></a></li>
+    </ul>
+</section>

@@ -1,0 +1,42 @@
+---
+import Download from "./Download.astro";
+
+const items = [
+  { name: "Inicio", url: "/" },
+  { name: "Experiencia", url: "#experience" },
+  { name: "Proyectos", url: "#projects" },
+  { name: "Acerca de mí", url: "#about" },
+  { name: "Contacto", url: "#contact" },
+];
+---
+
+<header
+  class="fixed top-0 flex justify-between items-center w-full p-8 font-medium bg-dark-blur backdrop-blur-lg z-20"
+>
+  <a href="/">
+    <figure class="w-20">
+      <img src="/logo.svg" alt="" />
+    </figure></a
+  >
+  <nav class="flex items-center gap-2">
+    <ul class="flex items-center gap-2">
+      {
+        items.map((item) => (
+          <li class="flex rounded border-solid border-transparent border-2 text-white hover:border-white-blur hover:bg-dark-blur">
+            <a href={item.url} class="py-2 px-4">
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <a
+      href="../../data/hv-katy-barboza.pdf"
+      class="flex gap-2 px-4 py-2 items-center text-white h-auto rounded border-solid border-white border-2 hover:border-primary hover:bg-primary hover:text-dark"
+      download
+    >
+      Hoja de vida
+      <Download />
+    </a>
+  </nav>
+</header>

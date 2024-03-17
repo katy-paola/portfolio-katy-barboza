@@ -1,0 +1,68 @@
+---
+const projects = [
+  {
+    title: "Reloj Pomodoro",
+    description: "Aplicación web para mejorar la productividad",
+    src: "../projects/project1.png",
+  },
+  {
+    title: "Bridroom",
+    description: "Aplicación web para buscar habitaciones",
+    src: "../projects/project2.webp",
+  },
+  {
+    title: "Administra tu dinero",
+    description: "Aplicación web para administrar tus finanzas",
+    src: "../projects/project3.png",
+  },
+  {
+    title: "Portafolio minimalista",
+    description: "Plantilla para portafolio minimalista",
+    src: "../projects/project4.png",
+  },
+  {
+    title: "Ricky and Morty API",
+    description: "Buscador de personajes de la serie Ricky and Morty",
+    src: "../projects/project5.webp",
+  },
+  {
+    title: "Héroes de Marvel",
+    description: "Buscador de héroes de Marvel",
+    src: "../projects/project6.webp",
+  },
+];
+---
+
+<section
+  id="projects"
+  class="flex flex-col p-8 scroll-mt-[108px] text-white gap-8 bg-bg bg-cover bg-bottom"
+>
+  <h2 class="text-2xl bg-white-blur p-4 font-code font-semibold">
+    // Proyectos
+  </h2>
+  <ul class="grid grid-cols-auto-fill items-stretch gap-4">
+    {
+      projects.map((project) => (
+        <li>
+          <article class="flex flex-col p-2 h-full border-2 border-solid border-hover bg-dark-blur backdrop-blur">
+            <figure class="w-full h-40">
+              <img src={project.src} class="w-full h-full object-cover" alt={project.title} />
+            </figure>
+            <section class="flex flex-col justify-between h-full gap-4 p-1">
+              <section class="flex flex-col gap-1">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+              </section>
+              <a
+                href="#"
+                class="px-4 py-2 rounded border-solid text-center leading-none font-medium border-white text-white border-2 hover:border-primary hover:bg-primary hover:text-dark"
+              >
+                Visitar
+              </a>
+            </section>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</section>

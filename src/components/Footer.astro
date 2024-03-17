@@ -1,0 +1,49 @@
+---
+import Discord from "./Discord.astro";
+import GitHub from "./GitHub.astro";
+import Linkedin from "./LinkedIn.astro";
+import Up from "./Up.astro";
+---
+
+<footer
+  class="flex justify-between items-center h-32 p-8 bg-dark-blur text-white"
+>
+  <ul class="flex font-medium gap-2">
+    <li
+      class="rounded border-solid leading-none border-transparent text-white border-2 hover:border-hover hover:bg-hover"
+    >
+      <a
+        href="https://discord.com/users/katy_barboza"
+        class="flex p-2"
+        target="_blank"
+      >
+        <Discord />
+      </a>
+    </li>
+    <li
+      class="rounded border-solid leading-none border-transparent text-white border-2 hover:border-hover hover:bg-hover"
+    >
+      <a href="https://github.com/katy-paola" class="flex p-2" target="_blank">
+        <GitHub />
+      </a>
+    </li>
+    <li
+      class="rounded border-solid leading-none border-transparent text-white border-2 hover:border-hover hover:bg-hover"
+    >
+      <a
+        href="https://www.linkedin.com/in/katy-barboza-baena"
+        class="flex p-2"
+        target="_blank"
+      >
+        <Linkedin />
+      </a>
+    </li>
+  </ul>
+  <p>Katy Barboza Baena - Desarrolladora Web</p>
+  <a
+    href="#top"
+    class="px-3 py-2 rounded border-solid border-transparent text-white border-2 hover:border-hover hover:bg-hover"
+  >
+    <Up />
+  </a>
+</footer>
