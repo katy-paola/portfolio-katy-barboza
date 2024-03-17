@@ -1,5 +1,6 @@
 ---
 import Download from "./Download.astro";
+import Menu from "./Menu.astro";
 
 const items = [
   { name: "Inicio", url: "/" },
@@ -11,19 +12,22 @@ const items = [
 ---
 
 <header
-  class="fixed top-0 flex justify-between items-center w-full p-8 font-medium bg-dark-blur backdrop-blur-lg z-20"
+  class="fixed top-0 flex justify-between items-center w-full p-4 lg:p-8 font-medium bg-dark lg:bg-dark-blur backdrop-blur-lg z-20 text-sm lg:text-base"
 >
   <a href="/">
-    <figure class="w-20">
+    <figure class="w-14 lg:w-20">
       <img src="/logo.svg" alt="" />
     </figure></a
   >
-  <nav class="flex items-center gap-2">
-    <ul class="flex items-center gap-2">
+  <button id="menu-button" class="text-white lg:hidden">
+    <Menu />
+  </button>
+  <nav id="nav" class="absolute flex flex-col lg:flex-row lg:static w-full lg:w-auto items-center gap-2 p-4 lg:p-0 bg-dark lg:bg-transparent top-full left-0 hide nav">
+    <ul class="flex flex-col w-full lg:w-auto lg:flex-row items-center gap-2">
       {
         items.map((item) => (
-          <li class="flex rounded border-solid border-transparent border-2 text-white hover:border-white-blur hover:bg-dark-blur">
-            <a href={item.url} class="py-2 px-4">
+          <li class="flex justify-center w-full lg:w-auto rounded border-solid border-transparent border-2 text-white hover:border-white-blur hover:bg-dark-blur">
+            <a href={item.url} class="py-2 px-4 w-full text-center">
               {item.name}
             </a>
           </li>
@@ -32,7 +36,7 @@ const items = [
     </ul>
     <a
       href="../../data/hv-katy-barboza.pdf"
-      class="flex gap-2 px-4 py-2 items-center text-white h-auto rounded border-solid border-white border-2 hover:border-primary hover:bg-primary hover:text-dark"
+      class="flex justify-center gap-2 px-4 py-2 items-center w-full lg:w-auto text-white h-auto rounded border-solid border-white border-2 hover:border-primary hover:bg-primary hover:text-dark"
       download
     >
       Hoja de vida
@@ -40,3 +44,11 @@ const items = [
     </a>
   </nav>
 </header>
+<script>
+  const menuButton = document.getElementById("menu-button");
+  const nav = document.getElementById("nav");
+
+  menuButton?.addEventListener("click", () => {
+    nav?.classList.toggle("hide");
+  });
+</script>

@@ -24,6 +24,9 @@ export default {
 			gridTemplateColumns: {
 				'auto-fill': 'repeat(auto-fill, minmax(260px, 1fr))',
 			},
+			screens: {
+				'xs': '375px',
+			},
 		},
 	},
 	plugins: [],
