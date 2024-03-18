@@ -9,6 +9,8 @@ export default {
 				'dark': '#0a0a0a', //neutral 950
 				'dark-blur': 'rgba(10, 10, 10, 0.25)', 
 				'light': '#52525B08', //neutral 600 5%
+				'bg-intro': '#282C34',
+				'line-introduce': 'rgba(255, 255, 255, 0.008)', 
 				'gray': '#0D0D0D',
 				'white-dark': 'rgba(255, 255, 255, 0.40)',
 				'white-blur': 'rgba(255, 255, 255, 0.03)',
