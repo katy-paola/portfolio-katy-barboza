@@ -27,7 +27,7 @@ const items = [
       {
         items.map((item) => (
           <li class="flex justify-center w-full lg:w-auto rounded border-solid border-transparent border-2 text-white hover:border-white-blur hover:bg-dark-blur">
-            <a href={item.url} class="py-2 px-4 w-full text-center">
+            <a href={item.url} class="py-2 px-4 w-full text-center item">
               {item.name}
             </a>
           </li>
@@ -47,8 +47,15 @@ const items = [
 <script>
   const menuButton = document.getElementById("menu-button");
   const nav = document.getElementById("nav");
+  const items = document.querySelectorAll(".item");
 
   menuButton?.addEventListener("click", () => {
     nav?.classList.toggle("hide");
   });
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      nav?.classList.add("hide");
+    });
+  });
+
 </script>
